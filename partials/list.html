@@ -1,0 +1,32 @@
+<div class="row" ng-controller="listController">
+    <div class="container-fluid">
+        <div class="col-md-10 col-md-offset-1">
+
+            <div>
+            	<h1> Restaurant Listing</h1>
+            	<div class="input-group col-md-offset-8 col-md-4">
+  					<span class="input-group-addon">Filter</span>
+  					<input type="text" class="form-control" ng-model="filter.value" placeholder="">
+				</div>
+        	</div>
+            <br/>
+
+            <table class="table table-hover">
+                <tr class="info">
+                    <th ng-click="changeSorting('name')">Restaurant Name</th>
+                    <th ng-click="changeSorting('city')">City</th>
+                    <th ng-click="changeSorting('rating')">Rating</th>
+                    <th ng-click="changeSorting('cuisine')">Cuisine</th>
+                </tr>
+
+                <tr ng-repeat="restaurant in restaurants|orderBy:sort.column:sort.descending|filter:filter.value" ng-click="clickedRestaurant()">
+                    <td>{{restaurant.name}}</td>
+                    <td>{{restaurant.city}}</td>
+                    <td>{{restaurant.rating}}</td>
+                    <td>{{restaurant.cuisine}}</td>
+                </tr>
+            </table>
+
+        </div>
+    </div>
+</div>

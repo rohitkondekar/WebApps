@@ -1,0 +1,23 @@
+<br>
+<div class="container">
+
+	<div class="alert alert-danger" role="alert" ng-show="err">Invalid Username/Password</div>
+
+	<form class="col-md-offset-4 col-md-4" action="" method="POST" role="form">
+
+
+		<legend>Login</legend>
+	
+		<div class="form-group">
+			<label for="username">Username</label>
+			<input type="text" class="form-control" id="username" placeholder="username" ng-model="user.username" required>
+		</div>
+
+		<div class="form-group">
+			<label for="password">Password</label>
+			<input type="password" class="form-control" id="password" placeholder="password" ng-model="user.password" required>
+		</div>
+		<br>
+		<button type="submit" class="btn btn-primary" ng-click="login()">Submit</button>
+	</form>
+</div>

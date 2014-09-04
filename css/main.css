@@ -1,0 +1,31 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body { padding-top: 70px; }
+
+.jumbotron {
+	margin-top: -20px;
+}
+
+.navbar-text{
+	color: white;
+}
+
+.table-hover tr:hover {
+    cursor: pointer
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
